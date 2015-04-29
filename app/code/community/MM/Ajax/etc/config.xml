@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MM Ajax 
+ *
+ *
+ * @category     MM
+ * @package      MM_Ajax 
+ * @copyright    Copyright (c) 2015 MM (http://blog.meumagento.com.br/)
+ * @author       MM (Thiago Caldeira de Lima)  
+ * @version      Release: 0.1.0
+ */
+-->
+<config>
+    <modules>
+        <MM_Ajax>
+            <version>0.1.0</version>
+        </MM_Ajax>
+    </modules>
+    <frontend>
+        <routers>
+            <ajax>
+                <use>standard</use>
+                <args>
+                    <module>MM_Ajax</module>
+                    <frontName>ajax</frontName>
+                </args>
+            </ajax>
+        </routers>
+        <layout>
+            <updates>
+                <ajax>
+                    <file>mm/ajax.xml</file>
+                </ajax>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+           <ajax>
+                <class>MM_Ajax_Block</class>
+            </ajax>
+        </blocks>
+        <helpers>
+           <ajax>
+                <class>MM_Ajax_Helper</class>
+            </ajax>
+        </helpers>
+    </global>
+</config>
